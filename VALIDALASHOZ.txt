@@ -1,0 +1,14 @@
+html validálás:
+
+https://validator.w3.org/
+
+katt a validate by file upload-re és feltölt a weboldal
+
+css validálás:
+
+https://jigsaw.w3.org/css-validator/
+
+katt a file feltöltés és feltölt a gépről a css file
+
+mind a kettőről kell printscren majd vagy wod vagy paintbe be kell tenni a képet és lementeni a mappába
+
