@@ -1,0 +1,160 @@
+Hasznos dolgok
+cisco belépés:
+hanyat92@gmail.com
+Cserhajnalka92!
+
+Script:
+https://users.iit.uni-miskolc.hu/~szkovacs/OpNet/Cisco_osszefoglalo.pdf
+https://docplayer.hu/17289018-Cisco-packet-tracer-parancs-segedlet.html
+
+IP cím számoláshoz:
+https://www.calculator.net/ip-subnet-calculator.html	- ez jó ipv6-hoz is
+https://jodies.de/ipcalc					- csak ipv4-re
+
+Alhálózati maszk szímításhoz:
+https://www.serverion.com/hu/tools/ipv4-subnet-calculator/?fbclid=IwAR0Ce77TFCfIZST-AkOJ17W9xlS2Gc0wHyvp2JGuQilZVgiD5WveBai1wh4 
+
+A VLSM alhálózati kalkulátor:
+http://www.vlsmcalc.com/
+
+Ha X… percen belül X… hibás jelszó X… percig zárolva: 
+https://szit.hu/doku.php?id=oktatas:halozat:cisco:router	
+ha……… percen belül történõ ………hibás jelszómegadási kísérlet után zárolja az eszközt …….. percre!
+(config)# login block-for …… attempts …. within ……	
+
+A switch és router konfig. Közötti külömbség, hogy a routernél kell interfec-t beállítani
+		
+
+
+
+
+
+
+
+
+SWITCH CONFIGURÁLÁS:
+en
+conf t
+host 
+line con 0
+password 
+login
+line vty 0 16
+password
+login
+ex           - ezzel kilép a vonal szintról
+interface 
+ip address 
+no sh
+exit
+banner motd  "  ……………..   " 
+service password-encryption 
+enable secret enablepass
+exit
+copy ru st    		-konfig. Mentése, ezt  a sima #szinten kell kiadni!!!
+
+
+
+ROUTER CONFIGURÁLÁS:
+Hálózat cím beállítás, IP beállítás aktív interfacen:
+ena
+conf t
+interface  ……			
+ip address……… maszk is kell	
+
+no sh
+exit
+
+
+
+Alap configurálás ROUTER:
+ena														
+conf t
+enable password ………. 
+enable secret …………..
+service passwod-encryption
+banner motd „”
+hostname …………..
+line con 0 
+password …………
+login 
+exit 
+line vty 0 5 
+password …….. 
+login 
+exit
+copy running-configuration startup-configuration
+
+
+Enable jelszó beállítása: 
+enable password ………. 
+
+Enable titkos jelszó (ez az „erõsebb”): 
+enable secret …………..
+
+Jelszótitkosítás bekapcsolása: 
+service passwod-encryption
+
+Konzol és telnet kapcsolatok jelszavainak megadása:
+line con 0 
+password …………
+login 
+exit 
+line vty 0 5 
+password …….. 
+login 
+exit
+copy running-configuration startup-configuration
+
+
+
+IPV6 conf:
+enable
+configute terminal
+ipv6 unicast-routing
+int 
+ipv6 enable
+ipv6 address 
+ipv6 address ………… link-local	hálózat címe
+no sh
+
+SSH CONFIGURÁLÁS:
+enable
+conf terminal 
+interface…… neve
+ip address……………….cím és maszk
+
+ip domain-name ………….internet cím
+
+crypto key generate rsa…… kódolása
+ip ssh version 1,2
+username …….. privilege …… secret …….
+line vty ….. vonalak száma
+login local
+transport input ssh
+privilege………. titkosítási szint
+
+
+
+
+
+
+DHCP CONFIGURÁLÁS:
+ena
+conf t		
+ip dhcp excluded-address  ………… megtartott cím tartomány ami nem kiosztható
+ip dhcp pool ………  hálózat neve
+network ……………………….. internet ip cím és maszk
+default-router …………… ip cím 
+dns-server ………………..8.8.8.8 ip cím
+
+
+MENTÉS TFTP-RE:
+Copy running-config tftp:
+utána be kell írni azt az ip címet, ahova menteni szeretnénk
+
+MAC cím elérése:
+ipconfig /all
+
+
+

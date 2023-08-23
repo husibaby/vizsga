@@ -1,2 +1,2 @@
-# vizsga
-agazativizsga
+# scripts
+Szkriptek

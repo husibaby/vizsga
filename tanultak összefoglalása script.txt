@@ -1,0 +1,104 @@
+switch> user szint
+switch> ebable   -> egy szinttel feljebb megy
+switch# configure terminal  -> még egy szinttel feljebb,globális szint
+switch(config)#   -> itt lehet beállítani az eszközök nevét hostname parancssal
+switch(config)# hostname SW1        -> no hostname parancssal törölhetünk
+SW1(config)# banner motd  "Belepni Tilos!"  vagy #Authorized Access Only!!# ->ezt írja ki amikor valaki illetéktelen be akar lépni az eszközünkre
+SW1(config)# service password-encryption ->titkosítjuk a jelszavakat, így csak egy kódsort látunk nem a jelszót
+SW1(config)# enable secret valami... ->első szint jelszavazésa
+SW1(config)# line console  ->fellépünk a consolra, mindig megadjuk a számot is (0,1,2,3...)
+SW1(config-line)# password valami....   -> jelszór adunk
+SW1(config-line)#login  ->végre is hajtjuk a jelszavazást
+SW1(config-line)# line vty -> a vonalnak is adunk elszavat
+SW1(config-line)# line vty 0 15  (attól függ mennyi eszközünk van anni a szám lehet csal 0 4 is, CISCO esetében mas 15 vonal)
+SW1(config-line)# password valami.... 
+SW1(config-line)#login
+SW1(config)# interface vlan1     -> belépés az interface-ra eéneveztük vlan1-re, router eseetében meg kell adni a gigabitet is pl g0/0 vagy g0/1...
+SW1(config-if)# ip address 192.168.1.1 255.255.255.0  -> ip cím generálás, mindig meg kell adni a maszkot is
+SW1(config-if)# no shutdown  ->ezzel a parancssal felkapcsolom a netet
+SW1(config-if)# do show running   -> megmutatja, hogy eddig mit csináltam
+SW1(config-if)# exit -> visszalépés 
+SW1(config)# copy ru st -> mentse el a konfigrációt, ha ezt nem tesszük meg akkor az eszköz kikapcsolásakor elveszik a beállított konfig.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+DHCP konfiguráció:
+
+- csak egy ip címet kell kiadni a DHCP-nek
+- az eszközeinknek nem kell egyesével ip címet generálni, hanem mindig konfigurálást követően kiossza a soron következőt.
+- bérbe is adható, akkor meg kell mondani, hogy mennyi időre adjuk
+- a felhasználó, aki leül a gép elé indítja el az eszközésről az ip cím kérést
+- szórási címmel fog kimenni: brouth-cast címzés
+- előfordulhat, hogy tőbb DHCP server van, ilyenkor az elsőt fogja elfogadni a felhasználó eszköze a többit eldobja, visszajelez a DHCP servernek, hogy köszi de már van ip címem
+
+(config)# szinten kell beállítani és elsőkörben meg kell adni, hogy mit akarunk kivenni
+
+R1(config)# ip dhcp excluded  -> address ez/ezek a cím/címek ez nem oszthatók ki pl.:192.168.10.1 192.168.10.9, ha csak egyet akarok megtartani egyet írok be, ha pl: az 5.et nem akarom kiadni akkor kiírom 1-4 éa 6-9-ig, de akkor annyi sorba kell írni.
+
+R1(config)# ip dhcp pool lan-pool-1  -> innen fogja kiadni a címeket,ez a halózat felé mutató pool. A pool, ahonnan meri, egyedi azonosító, bármi lehet én adom meg pl.:lan1 
+R1(dhcp-config)# network   -> mettől meddig adja ki a címeket, figyelem itt maszk is mindig kell
+R1(dhcp-config)# default-router   -> ez a router, server címe, magyarul honnan érkező hova közvetítsen
+
+domain-name, lase(lejárati idő),netbios-name... nem kellenek!
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Interface létrehozása egy hálózatban:
+
+katt router-desktop-terminal albak:
+enable
+configure terminal
+interface g0/0
+ip address 192.168.5.1  ->mindig az egyes lesz ez az első kiosztható, mert az ip címem 192.168.5.0 volt
+no shoutdown
+
+
+Server interface létrehozása:
+
+statikus módban tudjuk beállítani:
+katt server-desktop-ip
+ipv4 address: 192.168.2 (mert az egyet már elhasználtam a routernél)
+maszk: autómatán adja
+geatway 192.168.5.1 első kiosztható cím
+dns cím: ip címmel megegyező
+
+DHCP létrehozása a serveren:
+
+katt a server-service fülre 
+elsőkörben fel kell kapcsolni a szolgáltatást
+name: serverpool
+getway: 192.168.5.1 -> mert ki van osztva
+server: 192.168.5.2 -> mert az egyes ki van már osztva
+server ip addres: 192.168.5.10  ->itt adom meg, hogy mit tartalékolok magamnak, most 10-et, azaz a 11-től adja majd a címeket a DHCP
+save: elmentem a beállításokat
+
+
+Beállítottak ellenőrzése:
+
+katt server-service-HTTP
+ellenőrizni kell, hogy fel van-e kapcsolva (ált. igen)
+-itt látni fogunk egy wevlap rendszert, itt ha at index fül (edit) szóra katt, akkor bejön a weblap, ha a felső sorban a center szónál beírunk valami pl a nevünket és save-el mentjuk, akkor ha indítunk egy web browset akkor kiirja a weblap
+- ha azt akarjuk, hogy a web browserbe az ellenőrzéshez ne ip címet kelljen beadni akkor 
+server--service-DNS: ON állapotba rakom 
+name: amit akarok
+address: amelyik ip címre akacrom rátenni
+add: hozzáadom a listához
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Távoli ip kiosztás DHCP-vel:
+
+Ez azért fontos, mert a router szórási címnek fogja érzékelni és be kell állítani, hogy elfogadja a DHCP által küldött címeket.
+
+configute terminál szinten lehet végrehajtani
+R1(config)# interface g0/0
+R1(config-if)# ip helper-address 192.168.20.2 ->itt server címet adok meg, a helper-address parancs mondja meg hogy engedje át a router a címeket
+R1(config-if)# exit
+R1(config)# end
+R1(config)# exit
+R1# show ip interface g0/0
+
+
+
+
+
+
+

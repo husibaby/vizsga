@@ -1,0 +1,103 @@
+https://www.w3schools.com/html/default.asp
+https://webiskola.hu/html-ismeretek/html-alapok-a-html-webprogramozas-alapjai/
+http://weblabor.hu/cikkek/cssalapjai1
+HTML, CSS és PHP segédlet (elte.hu)
+
+
+TÁBLÁZAT:
+tr-sor;  th-fejléc kiemelés;  td-cella, tartalom
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+Sorszámozatlan lista:
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>    
+</ul>  
+Számozott lista:
+<ol>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>    
+</ol>  
+
+Navigációs sáv, CSS-ben:
+<ul>
+  <li><a href=""</a>…</li>
+  <li><a href="">…</a></li>
+  <li><a href="">…</a></li>
+  <li><a href="">…</a></li>
+</ul>
+
+Nacigációs sáv BOOSTRAP:
+
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" href="#"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#"></a>
+  </li>
+</ul>
+
+Navigációs bár színes Boostrap:
+<nav class="navbar navbar-expand-sm bg-light"> -színe
+
+  <div class="container-fluid">
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">/a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+
+Stílustulajdonságok
+Adott elem stílusának megadása: <div style="...">...</div> pl egy div elem stílusát adja meg, a <h1 style="...">...</h1> pedig egy h1 típusú címét. A style="..." stílus-megadásba a ... helyére az alábbiak szerint írhatunk tulajdonságokat.
+Színcolor: ; vagy color:# ;Háttérszínbackground:; vagy background:# ;Háttérképbackground-image: url('');Keretborder-style:;
+border-width;
+border-color:;Méretwidth: ;
+height: ;Betûtípusfont-family: 
+font-size: ;
+font-style: ;
+font-weight: ;Margó/behúzásmargin: ;
+padding: ;Szöveg igazításatext-align:;Kép középre igazításadisplay: block;
+margin-left: auto;
+margin-right: auto;Úsztatásfloat: right/left;
+

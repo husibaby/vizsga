@@ -1,0 +1,245 @@
+1. A dokumentumtípus beállítása<!DOCTYPE>
+Helyezzen el HTML5-ös dokumentumtípus definíciót az első sorba!
+<!DOCTYPE html>
+2. A weboldal nyelvelang='hu'
+A weboldal nyelve magyar legyen!
+<html lang='hu'>
+3. A weboldal karakterkódolásacharset='utf-8'
+A weboldal karakterkódolása utf-8 legyen!
+<meta charset='utf-8'>
+Előfordulhat, hogy az eredeti nyers szöveg nem UTF-8, hanem ANSI kódolású. Ilyenkor a fent beállítással az ékezetes karakterek olvashatatlanul jelennek meg. ANSI kódolás esetén az ISO-8859-2 beállítást szükséges használni a magyar ékezetes magánhangzók helyes megjelenéséhez.
+
+<meta charset='iso-8859-2'>
+4. A böngésző címsora<title>
+A böngésző címsorában megjelenő cím  Oldalfőcím  legyen!
+<title> Oldalfőcím </title>
+5. CSS stílusleíró fájl hivatkozása<link>
+Helyezzen el hivatkozást a  stilus.css  stíluslapra!
+<link href='stilus.css' rel='stylesheet' type='text/css'>
+Egy adott .html állomány akár több stílusleíró fájlból is dolgozhat. Ezt így lehetséges elérni:
+
+<link href='bootstrap.css' rel='stylesheet' type='text/css'>
+<link href='stilus.css'    rel='stylesheet' type='text/css'>
+6. Javascript fájl hivatkozása<script>
+Helyezzen el hivatkozást a  program.js  állományra!
+<script src='program.js'></script>
+Kezdeti beállítások áttekintő forráskódja
+Foglaljuk össze a fentieket egyetlen forráskódba azért, hogy egyben átláthassuk, mely pontoknak hol is van a helye a kód egészében. Így az alábbi kódhoz juthatunk:
+<!DOCTYPE html>
+<html lang='hu'>
+    <head>
+        <meta charset='utf-8'>
+        <title> Oldalfőcím </title>	
+	<link href='bootstrap.css' rel='stylesheet' type='text/css'>
+	<link href='stilus.css'    rel='stylesheet' type='text/css'>
+        <script src='program.js'></script>
+    </head>
+
+    <body>
+	... ... ...
+    </body>
+</html>
+
+A szövegtörzs (body) elemei
+7. Karakterformázás<b> <i> <u>
+Állítsa félkövérre, dőltre, aláhúzottra ...   tegye felső indexbe, alsó indexbe ...
+      HTML	      CSS
+félkövér	
+<b>...</b>
+font-weight: bold ;
+dőlt	
+<i>...</i>
+font-style: italic ;
+aláhúzott	
+<u>...</u>
+text-decoration: underline ;
+link  aláhúzásának  megszüntetése	
+text-decoration: none ;
+betűszín	
+nem támogatott megoldás
+color: #RRGGBB ;
+felső index	
+<sup>...</sup>
+-
+alsó index	
+<sub>...</sub>
+-
+8. Képek beszúrása, és szövegezése<img src>
+Szúrja be a  exam.jpg  képet! A képhez tartozó címkék (ha a kép fölé visszük az egeret, vagy a kép nem tölthető be)  Vizsga  legyenek!
+<img src='exam.jpg' title='Vizsga' alt='Vizsga'>
+title: ha a kép fölé visszük az egeret   (a kép címe)
+alt: ha a kép nem tölthető be   (alternatív tartalom)
+Képek méretezése
+
+width height
+Állítsa a kép szélességét 150 képpontra / magasságát 200 képpontra!
+      HTML	      CSS
+szélesség	
+<img ... width=150>
+width: 150px ;
+magasság	
+<img ... height=200>
+height: 200px ;
+
+Képek balra / jobbra igazítása
+
+float
+A kép legyen balra / jobbra igazított, és a szöveg vegye körül a képet!
+      HTML	      CSS
+balra	
+<img ... align='left'>
+float: left ;
+jobbra	
+<img ... align='right'>
+float: right ;
+9. Hivatkozás kialakítása<a href>
+Alakítson ki hivatkozást, a hivatkozás új ablakban nyíljon meg!
+<a href='url.cim' target='_blank'> ... </a>
+Fontos a _blank szó elején az aláhúzásjel.
+
+10. Felsorolás: számozatlan lista, számozott lista<ul> <ol> <li>
+Készítsen számozatlan listát...!
+<ul>
+    <li> ... ... </li>
+    <li> ... ... </li>
+    <li> ... ... </li>
+</ul
+... ...
+... ...
+... ...
+Készítsen sorszámozott listát...!
+<ol>
+    <li> ... ... </li>
+    <li> ... ... </li>
+    <li> ... ... </li>
+</ol
+... ...
+... ...
+... ...
+Miről lehet megjegyezni, megkülönböztetni ezeket a tag-eket? A válasz az angol elnevezések kezdőbetűiben keresendő:
+
+<ul>:  unordered  list - rendezetlen (számozatlan) lista
+<ol>:  ordered  list - rendezett (számozott) lista
+<li>:  list  item - lista elem
+Állítsa a felsorolás jelét üres karikára!
+list-style-type
+<ul style=' list-style-type: circle; '>
+A további lehetséges felsorolásjelek, illetve számformátumok a list-style-type ismertetőjében találhatóak.
+
+11. Táblázatok<table>
+Szúrjon be táblázatot, melynek 2 sora és 4 oszlopa van!
+<table border=2>
+    <tr>
+        <td> A </td>
+        <td> B </td>
+        <td> C </td>
+        <td> D </td>
+    </tr>
+    <tr>
+        <td> E </td>
+        <td> F </td>
+        <td> G </td>
+        <td> H </td>
+    </tr>
+</table>
+A	B	C	D
+E	F	G	H
+
+Cellák egyesítése
+
+colspan rowspan
+Vonja össze az A és az E, valamint a B, C és D cellákat!
+<table border=2>
+    <tr>
+        <td rowspan=2> AE  </td>
+        <td colspan=3> BCD </td>
+    </tr>
+    <tr>
+        <td> F </td>
+        <td> G </td>
+        <td> H </td>
+    </tr>
+</table>
+AE	BCD
+F	G	H
+Tehát:
+
+rowspan :   több sorból egymás alatti cellák összevonása (row=sor)
+colspan :   több oszlopból egymás melletti cellák összevonása (column=oszlop)
+a számparaméter pedig az összevonni kívánt cellák darabszáma.
+
+
+A HTML és a CSS kapcsolata
+12. Keretek  (és bármilyen egyéb elemek)  formázásaid
+Hozzon létre keretet (div) és rendelje hozzá a  leiras   azonosítókijelölőt!
+<div id='leiras'>
+    ... ... ...
+</div>
+Az azonosítókijelölőt gyakran nevezik elemazonosítónak, vagy egyszerűen csak azonosítónak, illetve a CSS fájlokban szelektornak, néha elemszelektornak.
+
+
+class
+Hozzon létre keretet (div) és formázza meg az alábbi osztálykijelölőkkel:  hatter1 ,  oszlopok  és  belsoszoveg !
+<div class='hatter1 oszlopok belsoszoveg'>
+    ... ... ...
+</div>
+Ha egy keret (div) formázásakor több osztálykijelölőt is szükséges alkalmazni, akkor azok neveit szóközzel elválasztva kell felsorolni az idézőjelen, vagy aposztrófon belül.
+
+Az osztálykijelölő további lehetséges elnevezései: osztályazonosító, osztálybesorolás, szelektor, osztályszelektor - ezek mind ugyanazt jelentik.
+
+13. A CSS fájl szelektorai#elem .osztály
+Hozzon létre új szelektort ... !
+      HTML	      CSS
+elem	
+<div id='leiras'>
+    ... ... ...
+</div>
+#leiras {
+    ... ... ...
+}
+osztály	
+<div class='menu'>
+    ... ... ...
+</div>
+.menu {
+    ... ... ...
+}
+Vegyük észre a különbséget:
+
+Az elemazonosítót
+HTML-ben az id paraméterrel jelöljük;
+CSS-ben a kialakításkor a # jellel hozzuk létre;
+akkor használjuk, amikor csak 1 elemet szeretnénk formázni.
+
+Az osztályazonosítót
+HTML-ben a class paraméterrel jelöljük;
+CSS-ben a kialakításkor a  .  (tehát a pont) jellel hozzuk létre;
+akkor használjuk, amikor egyszerre több elemet is szeretnénk formázni.
+
+További formázások a CSS részben
+14. Külső margó, belső margómargin padding
+... legyen az elem külső margója körbe 8 képpont, a belső margója pedig fent és lent 4-4, a bal oldalon 12, a jobb oldalon 20 képpont!
+... ... ...
+{
+    margin  : 8px ;
+    padding : 4px 20px 4px 12px ;
+}
+fent jobb lent bal - az óramutató járásának megfelelően
+Tehát:
+
+margin  :  külső margó
+padding :  belső margó
+az oldalak sorrendje pedig: fent jobb lent bal - az óramutató járásának megfelelően.
+
+15. Háttérkép beállításabackground
+Állítsa be a doboz elemnek háttérképként a bg.png képet, mely a jobb oldalon (függőlegesen lefelé) ismétlődjön, a mérete az eredeti kép méretének fele legyen! A doboz háttérszíne egyébként #FDA legyen!
+#doboz
+{
+    background-color    : #FDA          ;
+    background-image    : url('bg.png');
+    background-repeat   : repeat-y      ;
+    background-position : right         ;
+    background-size     : 50% 50%       ;
+}
+A background-image tulajdonság után az  url( )  kifejezés nem nélkülözhető a kép helyes betöltéséhez. Az aposztrófok között szükség esetén mappa, illetve elérési útvonal is megadható a kép neve előtt.
+

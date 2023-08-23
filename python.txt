@@ -1,0 +1,132 @@
+* [] – egy nyitó és egy záró szögletes zárójel, listát lehet vele megadni.
+* {} – egy nyitó és egy záró kapcsos zárójel, szótárat lehet vele megadni.
+* abs() – megadja a zárójelben lévõ szám abszolút értékét.
+* and – if vagy elif után, illetve a while-ciklus feltételei között szerepelhet, és azt lehet vele kikötni, hogy a két oldalán megadott két feltételnek egyszerre kell teljesülnie. Magyarul: és. Kiejtéshez kattints!
+* append() – nem önálló parancs, hanem a lista adattípus tagfüggvénye. Magyarul: hozzáfûz. Listához tudunk vele új elemet hozzáfûzni. Kiejtéshez kattints!
+* bool, bool() – Az elsõ szó egy adattípus, a Boolean neve a Pythonban. A szó jelentése Bool-i, de magyarra “logikai” változóként fordítjuk. Értéke True (igaz), vagy False (hamis) lehet. A második egy függvény, ami logikai értékké alakítja azt, ami a zárójelben van. Ha lehet. A Boolean szó kiejtéséhez kattints!
+* break – arra való, hogy kilépjünk egy ciklusból, még mielõtt az végigfutna. Magyarul: megszakítás. Kiejtéshez kattints!
+* close() – nem önálló parancs, hanem a fájl típus tagfüggvénye. Megnyitott fájl bezárására való. Magyarul: bezár. Kiejtéshez kattints!
+* count() – nem önálló parancs, hanem a lista adattípus tagfüggvénye. Magyarul: megszámol. Megmondja, hogy a zárójelben szereplõ elem hányszor fordul elõ a listában. Kiejtéshez kattints!
+* dict() – szótár létrehozására szolgál. A dictionary szóból származik, ami szótárat jelent. A dictionary szó kiejtéséhez kattints!
+* enumerate – a for-ciklusokban használható, ha egyszerre akarunk számlálós és bejárós ciklust. Magyarul körülbelül: számozott listába szed, felsorol. Kiejtéshez kattints!
+* def – függvényt lehet vele megadni, azaz definiálni. Nem is azt jelenti, hogy deaf, azaz süket, sem azt, hogy def, azaz klassz, hanem a define, magyarul: definiál szó rövidítése. Így ejtjük (mint a süketet), de valójában errõl a szóról van szó.
+* elif – elágazáskor a további (az if-ág nem-teljesülése esetén még megvizsgálandó) feltételeket vezeti be. Az else és az if szó összevonásából született meg, ilyen angol szó nincs. Ha programkódot olvasol, akkor az elif olvasása “különben, ha”
+* else – elágazáskor az utolsó ágat vezeti be, amely akkor fut le, ha egyik korábbi ág feltétele sem teljesült. Magyarul: különben. Kiejtéshez kattints!
+* extend() – nem önálló parancs, hanem a lista adattípus tagfüggvénye. Magyarul: bõvít. Egy listával bõvíti az eredeti listát: az új listát a régi végére biggyeszti. Kiejtéshez kattints!
+* False – a bool adattípus egyik lehetséges értéke. Magyarul: hamis. Kiejtéshez kattints! Mindig nagy betûvel kezdjük.
+* float, float() – Az elsõ szó egy adattípus, a floating point number, magyarul lebegõpontos szám típust jelzi. A második egy függvény, ami lebegõpontos számmá alakítja azt, ami a zárójelben van. Ha lehet. A floating szó kiejtéséhez kattints!
+* for – a bejárós, vagy más néven for-ciklus elsõ szava. Nem tudom jól lefordítani. Kiejtéshez kattints!
+* get() – nem önálló parancs, hanem a szótár adattípus tagfüggvénye. Magyarul: megszerez, megkap. A szótár kulcsához tartozó értéket lehet vele megtudni, de beállítható arra is, hogyha nincs ilyen kulcs, akkor adjon vissza általunk megadott értéket a kulcshoz tartozó érték helyett. Kiejtéshez kattints!
+* IDE – ez nem parancs, az integrált fejlesztõi környezet (Integrated Development Environment) rövidítése. Tulajdonképpen egy kódszerkesztõprogram, pár egyéb képességgel. A Python saját IDE-je az IDLE, de sok más IDE is használható hozzá.
+* IDLE – ez nem parancs, hanem a Python fejlesztõi környezetének neve. Van jelentése is, mert a készítõk vicces kedvükben voltak. Magyarul: tétlen.  Kiejtéshez kattints!
+* if – a programban a elágazás elsõ feltételét vezeti be. Magyarul: ha. Kiejtéshez kattints!
+* index() – nem önálló parancs, hanem a lista adattípus tagfüggvénye. Visszaadja a zárójelben megadott elem elsõ elõfordulásának indexét a listában. Kiejtéshez kattints!
+* input() – választ vár a felhasználótól. A zárójelben elhelyezhetsz kérdést, hogy a felhasználó tudja, hogy mire kell válaszolnia. A választ érdemes változóban tárolni. Magyarul: bemenet, bemenõ jel. Kiejtéshez kattints!
+* insert(hova, elem) – nem önálló parancs, hanem a lista adattípus tagfüggvénye. Magyarul: beszúr. Két paramétere van, a listába az új elem-et a lista “hova” helyére szúrja be. Kiejtéshez kattints!
+* int, int() – Az elsõ szó egy adattípus, az integer, magyarul egész szám típust jelzi. A második egy függvény, ami egész számmá alakítja azt, ami a zárójelben van. Ha lehet. Az integer szó kiejtéséhez kattints!
+* import – modult tölthetünk be vele. Illik a program elején szerepeltetni. Kiejtéshez kattints!
+* items() – nem önálló parancs, hanem a szótár adattípus tagfüggvénye. Magyarul: dolgok, egy felsorolás elemei. A szótár kulcs-érték párjait adja vissza, hogy for-ral bejárhassuk õket. Kiejtéshez kattints!
+* list() – lista létrehozására szolgál. Magyarul: lista. Kiejtéshez kattints!
+* lower() – nem önálló parancs, hanem a string adattípus tagfüggvénye. A stringet kisbetûssé alakítja. Ha eddig is kisbetûs volt, nos, annyi baj legyen! A lower case magyarul kisbetût jelent. Kiejtéshez kattints!
+* join() – nem önálló parancs, hanem a string adattípus tagfüggvénye. A zárójelben egy olyan bejárható objektumot, például listát adhatunk meg, ami további stringeket tartalmaz. A zárójelben lévõ objektum stringejit úgy fûzi eggyé (azaz konkatenálja) a join, hogy közéjük az elõtte szereplõ stringet teszi. Például az ‘X’.join([‘alma’, ‘körte’, ‘szilva’]) eredménye almaXkörteXszilva. Magyarul: illeszt, összeforr, egybeköt, egyesít. Kiejtéshez kattints!
+* keys() – nem önálló parancs, hanem a szótár adattípus tagfüggvénye. Magyarul: kulcsok. A szótár kulcsait adja vissza, hogy for-ral bejárhassuk õket. Kiejtéshez kattints!
+* len() – megmondja, hogy hány elemû a zárójelben lévõ lista, vagy azt, hogy hány karakteres a zárójelben lévõ karakterlánc. A length, azaz hossz szóból származik, de ilyen angol szó nincs. A length szó kiejtéséhez kattints!
+* map, map() -Az elsõ szó a map (magyarul: leképez) objektumtípust jelzi, a másik egy függvény, amivel map típusú objektumok elõ. A függvény két paramétert vár: az elsõ egy másik függvény neve, a második egy bejárható objektum, például lista. A map() függvény a megadott függvényt a lista minden elemére alkalmazza. Például a map(str, [1, 2, 3]) parancs az [1, 2, 3] lista minden egyes tagjára lefuttatja az str() függvényt. Kiejtéshez kattints!
+* max() – A zárójelben egy bejárható objektumot, például listát, vagy range-t adunk meg. A max() függvény megadja a bejárható objektumban lévõ számok közül a legnagyobbat,  ha karakterláncokat vizsgálunk, akkor az ábécérendben a leghátul állót.
+* min() – A zárójelben egy bejárható objektumot, például listát, vagy range-t adunk meg. A min() függvény megadja a bejárható objektumban lévõ számok közül a legkisebbet,  ha karakterláncokat vizsgálunk, akkor az ábécérendben a legelöl állót.
+* None – változónak adható értékül, ha semmilyen konkrét értéket nem akarunk a változóban tárolni, vagy az eddig benne tároltat óhajtjuk “kidobni”. Magyarul: semmi. Kiejtéshez kattints! Mindig nagy betûvel kezdjük.
+* open() – nem önálló parancs, hanem a fájl típus tagfüggvénye. Fájl megnyitására való. Magyarul: nyit. Kiejtéshez kattints!
+* or – if vagy elif után következhet, és azt lehet vele kikötni, hogy a megadott két feltétel közül elég, ha az egyik teljesül. Magyarul: vagy. Kiejtéshez kattints!
+* pop() -nem önálló parancs, hanem a lista és a szótár adattípus tagfüggvénye. Kiveszi a listából (szótárból) és visszaadja azt, ami a zárójelben van. Ha nem írunk semmit a listába, akkor a lista utolsó elemével teszi ugyanezt. Magyarul: kipattint, itt inkább kiugraszt.  Kiejtéshez kattints!
+* print() – kiírja, ami a zárójelben van. Magyarul: nyomtasd. Kiejtéshez kattints!
+* random – ez nem parancs, hanem a véletlenszámok kezeléséhez szükséges modul neve. Kiejtéshez kattints!
+* random.choice() – a zárójelben megadott bejárható objektumból választ egyet. A choice szó jelentése magyarul: választás. Kiejtéshez kattints!
+* random.randint() – véletlen egész számot állíthatunk elõ vele. Az alsó és a felsõ határt a zárójelben, vesszõvel elválasztva adod meg.
+* random.sample() – a zárójelben megadott bejárható objektumból választ annyit, amennyit kérünk. A kiválasztottak között nem lesz ismétlõdés. A sample szó jelentése magyarul: minta. Kiejtéshez kattints!
+* range, range() – Az elsõ szó a range (magyarul: sorozat, konkrétan számsorozat) objektumtípust jelzi, a másik egy függvény, amivel range típusú objektumok, azaz számsorozatok állíthatók elõ. Leggyakrabban for akármi in range(100) jellegû utasításban használjuk, a számlálós ciklus szimulálására. Kiejtéshez kattints!
+* read() – nem önálló parancs, hanem a fájl típus tagfüggvénye. Fájl tartalmának egyszerre, vagy pár karakterenként történõ beolvasására való. Magyarul: olvas. Kiejtéshez kattints!
+* readline() – nem önálló parancs, hanem a fájl típus tagfüggvénye. Szövegfájl egy sorának beolvasására való. Magyarul: olvas sort.
+* readlines() – nem önálló parancs, hanem a fájl típus tagfüggvénye. Szövegfájl sorait olvashatod be egy listába, a lista egyes elemei a szövegfájl sorai lesznek. Magyarul: olvas sortokat.
+* remove() – nem önálló parancs, hanem a lista adattípus tagfüggvénye. Magyarul: eltávolít. A zárójelben megadott elem elsõ elõfordulását kiveszi a listából. Kiejtéshez kattints!
+* reversed() – a zárójelben megadott listát vagy karakterláncot megfordítva adja vissza. Magyarul: megfordítva, megfordítottan. A reverse szó kiejtéséhez kattints!
+* round(szám, tizedesjegy) – tizedesjegy pontosságra kerekíti a megadott számot. Magyarul: kerekít. Kiejtéshez kattints!
+* return – függvény visszatérési értékét lehet vele megadni. Magyarul: visszatér. Kiejtéshez kattints!
+* time.sleep() – a zárójelben megadott másodpercet vár a programod. Magyarul: alszik. Kiejtéshez kattints!
+* set() – halmaz létrahozására szolgál. Magyarul: halmaz. Kiejtéshez kattints!
+* sort() – nem önálló parancs, hanem a lista adattípus tagfüggvénye, és arra jó, hogy a listát helyben rendezze – azaz az a lista, amelyikre meghívod, rendezett lesz. Magyarul: rendez. Paraméterezését lásd a sorted() függvénynél. Kiejtéshez kattints!
+* sorted() – a zárójelben megadott listát rendezi, és új listát ad vissza, az eredetit nem bántja. A reverse=True megadásával lehetõséged van csökkenõ sorrendet kérni, és kulcsfüggvényt is adhatsz meg, amivel úgy rendezel, ahogy jól esik – részletekért lásd a rendezõs postot. Magyarul: rendezett, rendezve. Kiejtéshez kattints!
+* split() – nem önálló parancs, hanem a karakterlánc adattípus tagfüggvénye, és arra jó, hogy a zárójelben megadott határolókarakternél szétszedi a karakterláncot listává. Ha nem adunk meg semmit, akkor a whitespace karaktereknél hasít. Magyarul: hasít. Kiejtéshez kattints!
+* str, str() – Az elsõ szó a string típust jelzi. A string szónak jó sok jelentése van, például madzagot is jelent, de nekünk jobb a füzér, informatikai szövegekben pedig karakterláncnak fordítandó. A legtöbb esetben  jó, ha stringet olvasol, és szöveget gondolsz. A második szó egy függvény, ami szöveggé, karakterlánccá alakítja azt, ami a zárójelben van, ha lehet. A string szó kiejtéséhez kattints!
+* strip() – nem önálló parancs, hanem a karakterlánc adattípus tagfüggvénye. A karakterlánc elejérõl és végérõl lepusztítja a zárójelben megadott karaktereket. Ha nem adunk meg semmit, akkor a whitespace-karaktereket takarítja le, azaz a szóközt, tabulátort, soremelést, kocsivisszát. Magyarul: megfoszt, lemeztelenít. Kiejtéshez kattints! A whitespace magyarul fehér helyet jelent, de soha nem szoktuk lefordítani.
+* sum() – A zárójelben egy bejárható objektumot, például listát, vagy range-t adunk meg. A sum() függvény megadja a bejárható objektumban lévõ számok összegét. Magyarul: összeg. Kiejtéshez kattints!
+* True – a bool adattípus egyik lehetséges értéke. Magyarul: igaz. Kiejtéshez kattints! Mindig nagy betûvel kezdjük.
+* update() – nem önálló parancs, hanem a szótár adattípus tagfüggvénye. Magyarul: frissít. Létezõ szótár értékeit frissíthetjük vele. Kiejtéshez kattints!
+* upper() – nem önálló parancs, hanem a karakterlánc adattípus tagfüggvénye. A karakterlánc NAGYBETÛS változatát adja vissza. Az upper case szó jelentése magyarul: nagybetû. Kiejtéshez kattints!
+* values() – nem önálló parancs, hanem a szótár adattípus tagfüggvénye. Magyarul: értékek. A szótár értékeit adja vissza, hogy for-ral bejárhassuk õket. Kiejtéshez kattints!
+* while – a róla elnevezett while-ciklus elsõ szava. Addig ismétlõdik a ciklus, amíg a while után megfogalmazott feltétel teljesül. Magyarul: amíg. Kiejtéshez kattints!
+
+
+
+Script:
+Sima beolvastatás:
+def beolvas():
+    f = open("….txt, vagy xls vagy csss…", encoding="UTF-8")
+    for sor in f:
+        lista.append(sor.strip().lower())	
+	#lower=kisbetû, upper=nagybetû, split=ahol le akarjuk vláasztani a str.ket
+    for item in lista:
+        print(item)    
+
+
+Objektum orientálás:
+class …….:	#nagy betûvel hogy milyen osztály
+    def __init__(self,……………):	#ide írom a forrás részeit, egységeit
+        self. …….= …..
+        self. ……= …..
+        self. ….= ….
+        .. stb
+
+	#Lista létrehozása:
+
+lista=[]
+
+def beolvas():
+    f = open("….. txt vagy xls vagy css…", encoding="UTF-8")
+    f. readnline() 
+	#meg kell nézni, hogy van-e fejléc. Ha van: f.readline() egy sort kiolvasok!!
+    for sor in f:
+        reszek= sor.strip().split(";")	#vágja le a ; mentén vagy a , mentén vagy…
+        …= reszek[0]
+        ….= reszek[1]
+        ….= int(reszek[2]) 	#ha szám van benne akkor int kell a részek elé
+        ..stb
+        obj= ide jön hogy milyen osztály (………) #fel kell sorolni a self.utáni részeket
+        lista.append(obj)
+    f.close()  	#bezárom a függvényt
+
+
+lista elemeinek száma:
+print(f"……… száma: {len(lista)}")
+
+lista sorba rendezése:
+lista.sort()
+
+szerepel-e valami a listában:
+def szerepel-e valami():
+    valami= input(" amit keresek a listában:”)
+    if valami in lista:
+        print("a valami szerepel a listában")
+    else:
+        print("a valami nem szerepel a listában. ")
+
+ha mennyiség vagy darabszámot kell számolni:
+def valami():
+    db=0  		#kell egy nullás érték amihez hozzá adja
+    for item in lista:
+        if "item" in item.valami:
+            db += 1  #itt ha talál itemet akkor hozzáadja
+    print(f"valami : {db} valami")
+
+
+
+
